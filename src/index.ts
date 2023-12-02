@@ -11,4 +11,6 @@ app.get('/status', function (req, res) {
     res.send('Status')
   })
 
-app.listen(port, () => console.log(`Server opened on port ${port}`))
+app.listen((process.env.PORT || 5000), function(){
+  console.log('listening on *:5000');
+});
